@@ -3,6 +3,6 @@ var express = require('express');
 var router = express.Router();
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', { title: 'WCTA Esports', page: 'home' });
+    res.render('index', { title: 'SSHS Esports', page: 'home' });
 });
 module.exports = router;
