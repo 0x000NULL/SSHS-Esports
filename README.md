@@ -1,1 +1,1 @@
-# SSHS-Esports
+# wctaesports.org

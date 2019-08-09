@@ -1,7 +1,87 @@
 doctype html
-html
+html(lang='en')
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet")
+    link(rel='stylesheet' href='css/all.css')
+    link(rel='icon' type='image/x-icon' href='/images/favicon.ico')
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    link(rel='stylesheet' href='/stylesheets/leaderboards.css' media='screen')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(charset='utf-8')
+  body.d-flex.flex-column.h-100
+    header
+      nav.shadow.navbar.navbar-expand-lg.sticky-top.navbar-dark(style='background-color: #a01c36')
+        a(class='navbar-brand' href='#')
+          img(src='/images/wctaesports-logo.png' alt='WCTA Esports Logo' width='66' height='66')
+        button(class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent')
+          span.navbar-toggler-icon
+        div(class='collapse navbar-collapse' id='navbarSupportedContent')
+          ul(class='navbar-nav mr-auto')
+            if page === 'home'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') Home
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/') Home
+            if page === 'smash'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') Smash
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/smash') Smash
+            if page === 'league'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') League
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/league') League
+            if page === 'mc'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') Minecraft
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/mc') Minecraft
+            if page === 'leaderboards'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') Leaderboards
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/Leaderboards') Leaderboards
+            //if page === 'others'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') Other Games
+            //else
+              li(class='nav-item')
+                a(class='nav-link' href='/others') Other Games
+            if page === 'about'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') About
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/about') About
     block content
+    footer.footer.py-3.mt-auto.container-fluid
+      .row.justify-content-sm-center
+        .col-sm-auto
+          p Copyright &copy; 2019 WCTA Esports. All rights reserved.
+#preloader
+// JavaScript Libraries
+script(src='lib/jquery/jquery.min.js')
+script(src='lib/jquery/jquery-migrate.min.js')
+script(src='lib/bootstrap/js/bootstrap.bundle.min.js')
+script(src='lib/easing/easing.min.js')
+script(src='lib/mobile-nav/mobile-nav.js')
+script(src='lib/wow/wow.min.js')
+script(src='lib/waypoints/waypoints.min.js')
+script(src='lib/counterup/counterup.min.js')
+script(src='lib/owlcarousel/owl.carousel.min.js')
+script(src='lib/isotope/isotope.pkgd.min.js')
+script(src='lib/lightbox/js/lightbox.min.js')
+script(src='js/main.js')
+script(src='js/all.js')
+script(src='js/leaderboards.js')

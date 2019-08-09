@@ -1,0 +1,3 @@
+C:\Users\Ethan\source\repos\WCTA Esports\obj\Debug\WCTA Esports.njsprojAssemblyReference.cache
+C:\Users\Ethan\source\repos\WCTA Esports\obj\Debug\WCTA Esports.njsproj.CoreCompileInputs.cache
+C:\Users\Ethan\source\repos\WCTA Esports\bin\Microsoft.NodejsTools.WebRole.dll

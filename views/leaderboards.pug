@@ -1,0 +1,123 @@
+extends layout
+
+block content
+    h4 Product Sales
+    .leaderboard
+        h4 Product Sales
+        ul
+            li.title Product A Sales
+            li.rank
+            li(data-rel='US' data-value='45')
+                span.name United States
+            li(data-rel='CA' data-value='54')
+                span.name Canada
+            li(data-rel='CN' data-value='45')
+                span.name China
+            li(data-rel='AU' data-value='76')
+                span.name Australia
+            li(data-rel='BR' data-value='34')
+                span.name Brazil
+            li(data-rel='GL' data-value='82')
+                span.name Greeland
+            li(data-rel='RU' data-value='24')
+                span.name Russian
+            li(data-rel='EE' data-value='42')
+                span.name Estonia
+            li(data-rel='ES' data-value='37')
+                span.name Spain
+            li(data-rel='GE' data-value='82')
+                span.name Georgia
+            li(data-rel='FR' data-value='25')
+                span.name France
+            li(data-rel='IS' data-value='22')
+                span.name Iceland
+        ul
+            li.title Product B Sales
+            li.rank
+            li(data-rel='US' data-value='48')
+                span.name United States
+            li(data-rel='CA' data-value='83')
+                span.name Canada
+            li(data-rel='CN' data-value='78')
+                span.name China
+            li(data-rel='AU' data-value='442')
+                span.name Australia
+            li(data-rel='BR' data-value='34')
+                span.name Brazil
+            li(data-rel='GL' data-value='254')
+                span.name Greeland
+            li(data-rel='RU' data-value='533')
+                span.name Russian
+            li(data-rel='EE' data-value='232')
+                span.name Estonia
+            li(data-rel='ES' data-value='422')
+                span.name Spain
+            li(data-rel='GE' data-value='532')
+                span.name Georgia
+            li(data-rel='FR' data-value='422')
+                span.name France
+            li(data-rel='IS' data-value='823')
+                span.name Iceland
+        ul
+            li.title Product C Sales
+            li.rank
+            li(data-rel='US' data-value='874')
+                span.name United States
+            li(data-rel='CA' data-value='834')
+                span.name Canada
+            li(data-rel='CN' data-value='745')
+                span.name China
+            li(data-rel='AU' data-value='634')
+                span.name Australia
+            li(data-rel='BR' data-value='732')
+                span.name Brazil
+            li(data-rel='GL' data-value='563')
+                span.name Greeland
+            li(data-rel='RU' data-value='322')
+                span.name Russian
+            li(data-rel='EE' data-value='532')
+                span.name Estonia
+            li(data-rel='ES' data-value='321')
+                span.name Spain
+            li(data-rel='GE' data-value='123')
+                span.name Georgia
+            li(data-rel='FR' data-value='231')
+                 span.name France
+            li(data-rel='IS' data-value='432')
+                span.name Iceland
+        ul
+            li.title Product D Sales
+            li.rank
+            li(data-rel='US' data-value='343')
+                span.name United States
+            li(data-rel='CA' data-value='563')
+                span.name Canada
+            li(data-rel='CN' data-value='673')
+                span.name China
+            li(data-rel='AU' data-value='532')
+                span.name Australia
+            li(data-rel='BR' data-value='432')
+                span.name Brazil
+            li(data-rel='GL' data-value='546')
+                span.name Greeland
+            li(data-rel='RU' data-value='575')
+                span.name Russian
+            li(data-rel='EE' data-value='432')
+                span.name Estonia
+            li(data-rel='ES' data-value='222')
+                span.name Spain
+            li(data-rel='GE' data-value='322')
+                span.name Georgia
+            li(data-rel='FR' data-value='333')
+                span.name France
+            li(data-rel='IS' data-value='732')
+                span.name Iceland
+        .total
+    script.
+        $(document).ready(function() {
+        var lb = $(".leaderboard").jqleaderboard({
+        // options
+        });
+        lb_object = lb.data("leaderboard");
+        lb_object.leaderboard_highlight("AU").leaderboard_select("GE");
+        });

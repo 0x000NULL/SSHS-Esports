@@ -1,0 +1,49 @@
+extends layout
+
+block content
+	.main#main
+		.jumbotron.jumbotron-fluid.smash-banner
+			.container
+				strong
+					h1.display-4.text-light.text-center.shadow.mb-3 SUPER SMASH BROS. ULTIMATE
+				p.lead.text-light.text-center.shadow-sm Competitive Super Smash Bros. Ultimate at West CTA.
+		.container
+			// if registry
+			// .row.justify-content-md-left.mb-5
+				.col-sm-auto
+					.media
+						img.mr-3(src='/images/wts-logo.png' alt='WCTA Esports Logo' width=120 height=120)
+						.media-body
+							h5.mt-0 Register for the tournament here now!
+							p.mb-0 The tournament starts on (date) and continues on (date 2). Registration closes at (date 3).
+							a.btn.btn-danger(href="#" role='button').mt-2 Register now!
+			.row.justify-content-md-left.mb-5
+				.col-sm-auto
+					.media
+						img.mr-3(src='/images/wts-logo.png' alt='WCTA Esports Logo' width=120 height=120)
+						.media-body
+							h5.mt-0 Looking for past tournament results?
+							p.mb-0 While we are migrating all tournament results to this new site, you can find the old tournament results through the button below.
+							a.btn.btn-dark(href='https://westtechsmash.club' role='button').mt-2 View old website
+			.row.justify-content-md-left.mb-5
+				.col-sm-auto
+					.media
+						img.mr-3(src='/images/wts-logo.png' alt='WCTA Esports Logo' width=120 height=120)
+						.media-body
+							h5.mt-0 Information
+							p.mb-0 All the information you'll need to compete in Smash at West CTA is right here. You can find our ruleset and stage list here.
+							a.btn.btn-dark(href='#' role='button').mt-2 View information
+			.row.justify-content-md-left.mb-5
+				.col-sm-auto
+					.media
+						img.mr-3(src='/images/wts-logo.png' alt='WCTA Esports Logo' width=120 height=120)
+						.media-body
+							h5.mt-0 Ruleset
+							ul.mb-0
+								li 3 stocks, 8 minutes
+								li All items off
+								li Stage hazards off
+								li Team attack 
+									strong on
+								li Handicaps off
+								li All other rules are to be set to default values
