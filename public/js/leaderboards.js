@@ -42,7 +42,7 @@
     jqLeaderboard.prototype._generate_markup = function () {
         var _this = this;
         _this._get_data_node().each(function () {
-            $(this).append('<span class="value">$' + $(this).attr('data-value') + '</span>');
+            $(this).append('<span class="value">' + $(this).attr('data-value') + '</span>');
         });
         _this._get_data_node().bind('mouseover', function () {
             var code = $(this).attr("data-rel");
