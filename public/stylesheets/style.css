@@ -26,7 +26,7 @@
         top: calc(50% - 30px);
         left: calc(50% - 30px);
         border: 6px solid #f2f2f2;
-        border-top: 6px solid #A21C3A;
+        border-top: 6px solid #242F69;
         border-radius: 50%;
         width: 60px;
         height: 60px;
@@ -127,7 +127,7 @@
         }
 
     #aboutus .box:hover .title a {
-        color: #A21C3A;
+        color: #242F69;
     }
 
     #aboutus .description {
@@ -135,5 +135,5 @@
         line-height: 28px;
         margin-bottom: 0;
         text-align: left;
-        color: #A21C3A;
+        color: #242F69;
     }
