@@ -18,6 +18,8 @@ var smash = require('./routes/smash-info');
 var about = require('./routes/about');
 var leaderboards = require('./routes/leaderboards');
 var mc = require('./routes/mc')
+var fortnite = require('./routes/fortnite')
+var overwatch = require('./routes/overwatch')
 
 var app = express();
 //var key = fs.readFileSync('www/ssl/server.key', 'utf8');
@@ -45,6 +47,8 @@ app.use('/league', league);
 app.use('/others', others);
 app.use('/leaderboards', leaderboards);
 app.use('/mc', mc);
+app.use('/overwatch', overwatch);
+app.use('/fortnite', fortnite);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

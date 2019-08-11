@@ -17,7 +17,7 @@ html(lang='en')
     header
       nav.shadow.navbar.navbar-expand-lg.sticky-top.navbar-dark(style='background-color: #242F69')
         a(class='navbar-brand' href='#')
-          img(src='/images/HSESPORRTSLOGO_1.png' alt='Silver Stae High School Esports Logo' width='66' height='66')
+          img(src='/images/HSESPORRTSLOGO_1.png' alt='Silver State High School Esports Logo' width='66' height='66')
         button(class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent')
           span.navbar-toggler-icon
         div(class='collapse navbar-collapse' id='navbarSupportedContent')
@@ -46,12 +46,24 @@ html(lang='en')
             else
               li(class='nav-item')
                 a(class='nav-link' href='/mc') Minecraft
-            if page === 'leaderboards'
+            if page === 'fortnite'
               li(class='nav-item active')
-                a(class='nav-link' href='#') Leaderboards
+                a(class='nav-link' href='#') fornite
             else
               li(class='nav-item')
-                a(class='nav-link' href='/Leaderboards') Leaderboards
+                a(class='nav-link' href='/fortnite') fortnite
+            if page === 'overwatch'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') overwatch
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/overwatch') overwatch
+            if page === 'leaderboards'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') Rankings
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/Leaderboards') Rankings
             //if page === 'others'
               li(class='nav-item active')
                 a(class='nav-link' href='#') Other Games
@@ -64,6 +76,7 @@ html(lang='en')
             else
               li(class='nav-item')
                 a(class='nav-link' href='/about') About
+
     block content
     footer.footer.py-3.mt-auto.container-fluid
       .row.justify-content-sm-center
