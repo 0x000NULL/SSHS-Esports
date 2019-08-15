@@ -34,6 +34,12 @@ html(lang='en')
             else
               li(class='nav-item')
                 a(class='nav-link' href='/lvlup') LVL UP
+            if page === 'leaugeinfo'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') Leauge Info
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/leaugeinfo') Leauge Info
 
             //li.dropdown.show
                 a#dropdownMenuLink.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
