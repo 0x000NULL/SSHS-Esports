@@ -20,6 +20,7 @@ var leaderboards = require('./routes/leaderboards');
 var mc = require('./routes/mc')
 var fortnite = require('./routes/fortnite')
 var overwatch = require('./routes/overwatch')
+var lvlup = require('./routes/lvlup')
 
 var app = express();
 //var key = fs.readFileSync('www/ssl/server.key', 'utf8');
@@ -49,6 +50,7 @@ app.use('/leaderboards', leaderboards);
 app.use('/mc', mc);
 app.use('/overwatch', overwatch);
 app.use('/fortnite', fortnite);
+app.use('/lvlup', lvlup);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
