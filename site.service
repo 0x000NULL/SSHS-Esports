@@ -1,0 +1,8 @@
+[Unit]
+Description=fake2
+After=network.target
+[Service]
+ExecStart=/bin/sh -c ’/bin/echo I am starting the fake2 service ; /bin/node /home/ethanaldrich9986/SSHS-Esports/app.js’
+ExecStop=/bin/echo IDK how to stop it.
+[Install]
+WantedBy=multi-user.target
