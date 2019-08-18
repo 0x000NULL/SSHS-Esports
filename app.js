@@ -1,6 +1,6 @@
 ﻿'use strict';
 var debug = require('debug');
-var express = require('express');
+//var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -9,6 +9,10 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 var http = require('http');
 var https = require('https');
+var express = require('express')
+    , cons = require('consolidate')
+    , app = express();
+var engines = require('consolidate');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -31,7 +35,8 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.engine('html', engines.swig); // take note, using 'html', not 'ejs' or 'pug'..
+app.set('view engine', 'html'); // also 'html' here.;
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
