@@ -13,7 +13,7 @@
 }
 
 .lvlup-banner {
-    background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('../images/lvlup-banner.png');
+    background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('../images/lvlupbanner.png');
     background-size: cover;
 }
 
