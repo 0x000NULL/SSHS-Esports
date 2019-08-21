@@ -1,4 +1,6 @@
 ﻿'use strict';
+const fileUpload = require('express-fileupload');
+const db = require('./public/models/db');
 var debug = require('debug');
 //var express = require('express');
 var path = require('path');
@@ -62,6 +64,8 @@ app.use('/LVLUPEXPO', LVLUPEXPO);
 app.use('/leagueinfo', leagueinfo);
 app.use('/blog', blog);
 app.use('/help', help);
+
+const controller = require('./public/js/controller.js')(app);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
