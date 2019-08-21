@@ -1,11 +1,11 @@
 {
   "name": "sshs-esports",
-  "version": "3.0.2",
+  "version": "3.6.9",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
-  "description": "WCTA Esports",
+  "description": "SSHS Esports",
   "author": " Ethan Aldrich, Billy Myers",
   "dependencies": {
     "@gamestdio/leaderboard": "^0.1.7",
