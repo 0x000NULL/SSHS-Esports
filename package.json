@@ -1,11 +1,11 @@
 {
-  "name": "sshs-esports",
+  "name": "Silver State Esports",
   "version": "3.6.9",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
-  "description": "SSHS Esports",
+  "description": "ilver State Esports",
   "author": " Ethan Aldrich, Billy Myers",
   "dependencies": {
     "@gamestdio/leaderboard": "^0.1.7",
@@ -30,7 +30,7 @@
     "yarn": "^1.17.3"
   },
   "main": "app.js",
-  "repository": "https://github.com/ethanaldrich9986/wctaesports.org.git",
+  "repository": "https://github.com/ethanaldrich9986/SSHS-Esports.git",
   "license": "MIT",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.10.0"
