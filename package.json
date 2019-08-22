@@ -1,6 +1,6 @@
 {
-  "name": "Silver State Esports",
-  "version": "3.6.9",
+  "name": "SilverStateEsports",
+  "version": "3.7.9",
   "private": true,
   "scripts": {
     "start": "node app.js"
