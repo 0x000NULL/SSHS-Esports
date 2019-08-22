@@ -28,6 +28,7 @@ var LVLUPEXPO = require('./routes/LVLUPEXPO')
 var leagueinfo = require('./routes/leagueinfo')
 var blog = require('./routes/blog')
 var help = require('./routes/help')
+var rainbow = require('./routes/rainbow6')
 
 var app = express();
 //var key = fs.readFileSync('www/ssl/server.key', 'utf8');
@@ -62,6 +63,7 @@ app.use('/LVLUPEXPO', LVLUPEXPO);
 app.use('/leagueinfo', leagueinfo);
 app.use('/blog', blog);
 app.use('/help', help);
+app.use('/rainbow', rainbow)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

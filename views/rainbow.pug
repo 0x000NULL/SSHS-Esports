@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    .main#main
+        .jumbotron.jumbotron-fluid.r6-banner
+            .container
+                strong
+                    h1.display-4.text-light.text-center.mb-3 Rainbow 6 Siege
+                p.lead.text-light.text-center Competitive Rainbow 6 Siege
+        .container
+            .row.justify-content-md-left.mb-5
+                .col-sm-auto
+                    .media
+                        img.mr-3(src='/images/r6s-icon.png' alt='R6rlogo' width=120 height=120)
+                        .media-body
+                            h5.mt-0 Coming Soon!
+                            p.mb-0 
+
+            //.row.justify-content-md-left.mb-5
+                .col-sm-auto
+                    .media
+                        img.mr-3(src='/images/minecraft-1-logo-png-transparent.png' alt='MC logo' width=120 height=120)
+                        .media-body
+                            h5.mt-0 Team Registry
+                            p.mb-0 You can register your team using the link below, but be sure to read ALL of the rules!
+                            a.btn.btn-dark(href='#' role='button').mt-2 Register your team
+            //.row.justify-content-md-left.mb-5
+                .col-sm-auto
+                    .media
+                        img.mr-3(src='/images/fortnite-logo-512.png' alt='fortnite logo' width=120 height=120)
+                        .media-body
+                            h5.mt-0 Team Registry
+                            p.mb-0 You can register your team in person at the venue.
+            //.row.justify-content-md-left.mb-5
+                .col-sm-auto
+                    .media
+                        img.mr-3(src='/images/fortnite-logo-512.png' alt='fortnite logo' width=120 height=120)
+                        .media-body
+                            h5.mt-0 Ruleset
+                            ul.mb-0
+                                li rules here
+            .row.justify-content-md-left.mb-5
+                .col-sm-auto
+                    .media
+                        img.mr-3(src='/images/r6s-icon.png' alt='R6 logo' width=120 height=120)
+                        .media-body
+                            h5.mt-0 Ruleset
+                            iframe(src="/misc/RainbowSixSiegeRuleset.pdf" width="300%" height="500px")

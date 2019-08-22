@@ -32,6 +32,11 @@
     background-size: cover;
 }
 
+.r6-banner {
+    background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('../images/r6-banner.png');
+    background-size: cover;
+}
+
 /* Prelaoder */
 
 #preloader {
