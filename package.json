@@ -1,11 +1,12 @@
 {
   "name": "SilverStateEsports",
-  "version": "3.7.9",
+  "version": "3.8.6",
   "private": true,
   "scripts": {
     "start": "node app.js"
+    "test": "mocha"
   },
-  "description": "Silver State Esports",
+  "description": "ilver State Esports",
   "author": " Ethan Aldrich, Billy Myers",
   "dependencies": {
     "@gamestdio/leaderboard": "^0.1.7",
