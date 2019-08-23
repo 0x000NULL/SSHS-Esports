@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node app.js"
   },
-  "description": "ilver State Esports",
+  "description": "Silver State Esports",
   "author": " Ethan Aldrich, Billy Myers",
   "dependencies": {
     "@gamestdio/leaderboard": "^0.1.7",
