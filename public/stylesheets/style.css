@@ -49,6 +49,19 @@
 .aboutussocialiconsforusdevdudethingies {
 }
 
+.sponsors {
+    text-align: center;
+}
+
+.sponsorslist {
+    text-align: center;
+    color: #242F69;
+}
+
+.sponsorslist.h4 {
+    color: #242F69;
+}
+
 /* Prelaoder */
 #preloader {
     position: fixed;
