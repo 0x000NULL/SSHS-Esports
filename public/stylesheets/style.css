@@ -37,19 +37,8 @@
     background-size: cover;
 }
 
-.gameabout {
-    text-align: justify;
-}
-
-.aboutusstuffigidrk {
-    margin: 10 auto;
-    text-align: center;
-}
-
-.aboutussocialiconsforusdevdudethingies {
-}
-
 /* Prelaoder */
+
 #preloader {
     position: fixed;
     top: 0;
