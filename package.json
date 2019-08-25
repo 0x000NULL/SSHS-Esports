@@ -1,13 +1,19 @@
 {
   "name": "SilverStateEsports",
-  "version": "3.8.4",
+  "version": "3.9.0",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "install": "npm install",
     "test": "mocha"
   },
   "description": "Silver State Esports",
-  "author": " Ethan Aldrich, Billy Myers",
+  "author": " Ethan Aldrich",
+  "contributors": [
+    {
+      "name": "Billy Myers"
+    }
+  ],
   "dependencies": {
     "@gamestdio/leaderboard": "^0.1.7",
     "blueimp-file-upload": "^10.0.0",
