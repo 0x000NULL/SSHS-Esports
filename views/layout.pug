@@ -91,18 +91,6 @@ html(lang='en')
             //else
               li(class='nav-item')
                 a(class='nav-link' href='/others') Other Games
-            if page === 'about'
-              li(class='nav-item active')
-                a(class='nav-link' href='#') About
-            else
-              li(class='nav-item')
-                a(class='nav-link' href='/about') About
-            if page === 'help'
-              li(class='nav-item active')
-                a(class='nav-link' href='#') Help
-            else
-              li(class='nav-item')
-                a(class='nav-link' href='/help') Help
             .dropdown
                 li(class='nav-item')
                     button.dropbtn(onclick='myFunction()') Games
@@ -120,6 +108,19 @@ html(lang='en')
             else
               li(class='nav-item')
                 a(class='nav-link' href='/Leaderboards') Rankings
+            if page === 'about'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') About
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/about') About
+            if page === 'help'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') Help
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/help') Help
+
 
 
     block content
