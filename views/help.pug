@@ -83,3 +83,14 @@ block content
                                         p Question
                                 //li
                                     p Answer
+        //.mailform
+          .div.mail
+              form#contact-form(action='/contact' method='post' role='form')
+                  fieldset
+                      label(for='name') Name *
+                      input#name(name='name' type='text' placeholder='Your name' required='required')
+                      label(for='email') Email *
+                      input#email(name='email' type='text' placeholder='Your email' required='required')
+                      label(for='message') Message *
+                      textarea#message(name='message' placeholder='Enter your message here' rows='3' required='required')
+                      button(type='submit') Submit
