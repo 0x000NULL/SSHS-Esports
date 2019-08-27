@@ -13,6 +13,13 @@ var express = require('express')
     , cons = require('consolidate')
     , app = express();
 var engines = require('consolidate');
+const nodemailer = require('nodemailer');
+const nodemailerSendgrid = require('nodemailer-sendgrid');
+const transport = nodemailer.createTransport(
+    nodemailerSendgrid({
+        apiKey: process.env.SENDGRID_API_KEY
+    })
+);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
