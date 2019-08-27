@@ -1,0 +1,30 @@
+                       if page === 'league'
+                            li(class='nav-item active')
+                            a(class='nav-link' href='#') League
+                       else
+                            li(class='nav-item')
+                            a(class='nav-link' href='/league') League
+                       if page === 'mc'
+                          li(class='nav-item active')
+                            a(class='nav-link' href='#') Minecraft
+                      else
+                          li(class='nav-item')
+                         a(class='nav-link' href='/mc') Minecraft
+                      if page === 'fortnite'
+                         li(class='nav-item active')
+                          a(class='nav-link' href='#') Fornite
+                      else
+                           li(class='nav-item')
+                           a(class='nav-link' href='/fortnite') Fortnite
+                       if page === 'overwatch'
+                          li(class='nav-item active')
+                          a(class='nav-link' href='#') Overwatch
+                      else
+                          li(class='nav-item')
+                          a(class='nav-link' href='/overwatch') Overwatch
+                      if page ==='rainbow'
+                          li(class='nav-item active')
+                          a(class='nav-link' href='#') Rainbow
+                      else
+                          li(class='nav-item')
+                          a(class='nav-link' href='/rainbow') Rainbow

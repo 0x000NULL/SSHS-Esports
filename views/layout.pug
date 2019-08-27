@@ -10,6 +10,7 @@ html(lang='en')
       link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
       script(src="/js/norc.js")
       script(src="/js/mail.js")
+      script(src="/js/dropdown.js")
       script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
       script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
       script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
@@ -42,46 +43,46 @@ html(lang='en')
             else
               li(class='nav-item')
                 a(class='nav-link' href='/leagueinfo') League Info
-            if page === 'smash'
+            //if page === 'smash'
               li(class='nav-item active')
                 a(class='nav-link' href='#') Smash
-            else
+            //else
               li(class='nav-item')
                 a(class='nav-link' href='/smash') Smash
-            if page === 'league'
+            //if page === 'league'
               li(class='nav-item active')
                 a(class='nav-link' href='#') League
-            else
+            //else
               li(class='nav-item')
                 a(class='nav-link' href='/league') League
-            if page === 'mc'
+            //if page === 'mc'
               li(class='nav-item active')
                 a(class='nav-link' href='#') Minecraft
-            else
+            //else
               li(class='nav-item')
                 a(class='nav-link' href='/mc') Minecraft
-            if page === 'fortnite'
+            //if page === 'fortnite'
               li(class='nav-item active')
                 a(class='nav-link' href='#') Fornite
-            else
+            //else
               li(class='nav-item')
                 a(class='nav-link' href='/fortnite') Fortnite
-            if page === 'overwatch'
+            //if page === 'overwatch'
               li(class='nav-item active')
                 a(class='nav-link' href='#') Overwatch
-            else
+            //else
               li(class='nav-item')
                 a(class='nav-link' href='/overwatch') Overwatch
-            if page ==='rainbow'
+            //if page ==='rainbow'
                 li(class='nav-item active')
                 a(class='nav-link' href='#') Rainbow
-            else
+            //else
               li(class='nav-item')
                 a(class='nav-link' href='/rainbow') Rainbow
-            if page === 'leaderboards'
+            //if page === 'leaderboards'
               li(class='nav-item active')
                 a(class='nav-link' href='#') Rankings
-            else
+            //else
               li(class='nav-item')
                 a(class='nav-link' href='/Leaderboards') Rankings
             //if page === 'others'
@@ -102,6 +103,24 @@ html(lang='en')
             else
               li(class='nav-item')
                 a(class='nav-link' href='/help') Help
+            .dropdown
+                li(class='nav-item')
+                    button.dropbtn(onclick='myFunction()') Games
+                    #myDropdown.dropdown-content
+                        a(class='nav-link' href='/fortnite') Fortnite
+                        a(class='nav-link' href='/league') League
+                        a(class='nav-link' href='/mc') Minecraft
+                        a(class='nav-link' href='/overwatch') Overwatch
+                        a(class='nav-link' href='/rainbow') Rainbow
+                        a(class='nav-link' href='/smash') Smash
+
+            if page === 'leaderboards'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') Rankings
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/Leaderboards') Rankings
+
 
     block content
     footer.footer.py-3.mt-auto.container-fluid
