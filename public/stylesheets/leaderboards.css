@@ -1,7 +1,7 @@
 ﻿.leaderboard {
     margin: 0 auto;
-    background-color: #242F69;
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    background-color: #FFFFFF;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -20,6 +20,7 @@
 
 .leaderboard h3, .leaderboard h4 {
     text-align: center;
+    color: #1b1b1b;
 }
 
 .leaderboard ul {
@@ -32,6 +33,7 @@
     max-width: 25%;
     list-style-type: none;
     padding-left: 4px;
+    color: #1b1b1b;
 }
 
 .leaderboard ul li.title {
@@ -54,7 +56,6 @@
         -moz-border-radius: 200px;
         -webkit-border-radius: 200px;
     border-radius: 200px;
-    background - color: #2a2a2a;
     display: none;
 }
 
