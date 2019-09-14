@@ -27,7 +27,7 @@ var others = require('./routes/others')
 var league = require('./routes/league')
 var smash = require('./routes/smash-info');
 var about = require('./routes/about');
-var leaderboards = require('./routes/leaderboards');
+var rankings = require('./routes/rankings');
 var mc = require('./routes/mc')
 var fortnite = require('./routes/fortnite')
 var overwatch = require('./routes/overwatch')
@@ -67,7 +67,7 @@ app.use('/users', users);
 app.use('/about', about);
 app.use('/league', league);
 app.use('/others', others);
-app.use('/leaderboards', leaderboards);
+app.use('/rankings', rankings);
 app.use('/mc', mc);
 app.use('/overwatch', overwatch);
 app.use('/fortnite', fortnite);
