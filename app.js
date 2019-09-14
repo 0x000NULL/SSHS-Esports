@@ -112,10 +112,14 @@ app.use(function (err, req, res, next) {
 var httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(80);
-httpsServer.listen(443);
+var httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
 
-var server = app.listen(80), function () {
+//httpServer.listen(80);
+//httpsServer.listen(443);
+app.set('port', process.env.PORT || 80);
+
+var server = app.listen(app.get('port'), function () {
     debug('Express server listening on port ' + server.address().port);
 });
 
