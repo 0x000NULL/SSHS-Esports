@@ -38,10 +38,15 @@ var help = require('./routes/help')
 var rainbow = require('./routes/rainbow6')
 
 var app = express();
-//var key = fs.readFileSync('www/ssl/server.key', 'utf8');
-//var cert = fs.readFileSync('www/ssl/server.cert', 'utf8');
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/fullchain.pem', 'utf8');
 
-//var credentials = { key: key, cert: cert };
+const credentials = {
+    key: privateKey,
+    cert: certificate,
+    ca: ca
+};
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -105,13 +110,16 @@ app.use(function (err, req, res, next) {
 
 
 var httpServer = http.createServer(app);
-//var httpsServer = https.createServer(credentials, app);
+const httpsServer = https.createServer(credentials, app);
 
-//httpServer.listen(80);
-//httpsServer.listen(443);
+httpServer.listen(80);
+httpsServer.listen(443);
 app.set('port', process.env.PORT || 80);
 
 var server = app.listen(app.get('port'), function () {
     debug('Express server listening on port ' + server.address().port);
 });
 
+httpsServer.listen(443, () => {
+    console.log('HTTPS Server running on port 443');
+});
