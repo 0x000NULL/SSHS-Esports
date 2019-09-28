@@ -29,8 +29,8 @@
 
 .leaderboard ul {
     float: left;
-    width: 25%;
-    max-width: 25%;
+    width: 50%;
+    max-width: 50%;
     list-style-type: none;
     padding-left: 4px;
     color: #1b1b1b;
