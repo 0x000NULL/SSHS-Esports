@@ -35,7 +35,6 @@ var LVLUPEXPO = require('./routes/LVLUPEXPO')
 var leagueinfo = require('./routes/leagueinfo')
 var blog = require('./routes/blog')
 var help = require('./routes/help')
-var rainbow = require('./routes/rainbow6')
 
 var app = express();
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/privkey.pem', 'utf8');
@@ -75,7 +74,6 @@ app.use('/LVLUPEXPO', LVLUPEXPO);
 app.use('/leagueinfo', leagueinfo);
 app.use('/blog', blog);
 app.use('/help', help);
-app.use('/rainbow', rainbow)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
