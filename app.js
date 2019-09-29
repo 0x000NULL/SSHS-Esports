@@ -28,13 +28,17 @@ var league = require('./routes/league')
 var smash = require('./routes/smash-info');
 var about = require('./routes/about');
 var rankings = require('./routes/rankings');
-var mc = require('./routes/mc')
-var fortnite = require('./routes/fortnite')
-var overwatch = require('./routes/overwatch')
-var LVLUPEXPO = require('./routes/LVLUPEXPO')
-var leagueinfo = require('./routes/leagueinfo')
-var blog = require('./routes/blog')
-var help = require('./routes/help')
+var mc = require('./routes/mc');
+var fortnite = require('./routes/fortnite');
+var overwatch = require('./routes/overwatch');
+var LVLUPEXPO = require('./routes/LVLUPEXPO');
+var leagueinfo = require('./routes/leagueinfo');
+var blog = require('./routes/blog');
+var help = require('./routes/help');
+var resources = require('./routes/resources');
+var solo = require('./routes/solo');
+var team = require('./routes/team');
+var oneoff = require('./routes/oneoff');
 
 var app = express();
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/privkey.pem', 'utf8');
@@ -42,9 +46,9 @@ const certificate = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.or
 const ca = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/fullchain.pem', 'utf8');
 
 const credentials = {
-    key: privateKey,
-    cert: certificate,
-    ca: ca
+	key: privateKey,
+	cert: certificate,
+	ca: ca
 };
 
 // view engine setup
@@ -74,6 +78,10 @@ app.use('/LVLUPEXPO', LVLUPEXPO);
 app.use('/leagueinfo', leagueinfo);
 app.use('/blog', blog);
 app.use('/help', help);
+app.use('/resources', resources);
+app.use('/team', team);
+app.use('/solo', solo);
+app.use('/oneoff', oneoff);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -119,5 +127,5 @@ var server = app.listen(app.get('port'), function () {
 });
 
 httpsServer.listen(443, () => {
-    console.log('HTTPS Server running on port 443');
+	console.log('HTTPS Server running on port 443');
 });

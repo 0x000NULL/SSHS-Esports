@@ -1,0 +1,40 @@
+﻿extends layout
+
+block content
+    .main#main
+        .jumbotron.jumbotron-fluid(background='#000')
+            .container
+                strong
+                    h1.display-4.text-light.text-center.mb-3(background='black') Resources
+                p.lead.text-light.text-center
+        .container
+            .row.justify-content-md-left.mb-5
+                .col-sm-auto
+                    .media
+                        img.mr-3(src='/images/HSESPORRTSLOGO_1.png' alt='League of Legends logo' width=120 height=120)
+                        .media-body
+                            h5.mt-0 Map
+                            div.map(class=map)
+                                iframe(src='https://www.google.com/maps/d/embed?mid=1r0I_anoAESSUGzK6ohosYcsGfHKFGrG5' width='200%' height='480')
+                            p.map Here is a map full of important locations in relation to Silver State Esports!
+
+
+            .row.justify-content-md-left.mb-5
+                .col-sm-auto
+                    .media
+                        img.mr-3(src='/images/HSESPORRTSLOGO_1.png' alt='League of Legends logo' width=120 height=120)
+                        .media-body(class=letter)
+                            h5.mt-0 Formal Letter
+                            p If you would like a formally written letter to give to a teacher or advisor to help explain some of the general information of the Silver State Esports League, feel free to download this letter written by our founder!
+                            iframe(src='./misc/SilverStateEsportsLetter.pdf' width='1000px' height='1250px')
+
+            .row.justify-content-md-left.mb-5
+                .col-sm-auto
+                    .media
+                        img.mr-3(src='/images/HSESPORRTSLOGO_1.png' alt='League of Legends logo' width=120 height=120)
+                        .media-body(class=SchoolAbb)
+                            h5.mt-0 School Abbreviations
+                            p 
+                            iframe(src='https://docs.google.com/spreadsheets/d/e/2PACX-1vRbtlTx-5AwxNzcVRnx-cuaIGYrN3AzekLc084GzQWGkJZ-EOwk4o25HME7fNyHqG2Y5_MWDQ7wFHvV/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false' width='300%' height='500px')
+
+							

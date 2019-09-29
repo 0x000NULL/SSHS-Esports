@@ -45,6 +45,12 @@ html(lang='en')
             else
               li(class='nav-item')
                 a(class='nav-link' href='/leagueinfo') League Info
+            if page === 'resources'
+              li(class='nav-item active')
+                a(class='nav-link' href='#') Resources
+            else
+              li(class='nav-item')
+                a(class='nav-link' href='/resources') Resources
             //if page === 'smash'
               li(class='nav-item active')
                 a(class='nav-link' href='#') Smash
@@ -89,13 +95,11 @@ html(lang='en')
                 a(class='nav-link' href='/others') Other Games
             .dropdown
                 li(class='nav-item')
-                    button.dropbtn(onclick='myFunction()') Games
+                    button.dropbtn(onclick='myFunction()') Events
                     #myDropdown.dropdown-content
-                        a(class='nav-link' href='/fortnite') Fortnite
-                        a(class='nav-link' href='/league') League
-                        a(class='nav-link' href='/mc') Minecraft
-                        a(class='nav-link' href='/overwatch') Overwatch
-                        a(class='nav-link' href='/smash') Smash
+                        a(class='nav-link' href='/solo') Solo Events
+                        a(class='nav-link' href='/team') Team Events
+                        a(class='nav-link' href='/oneoff') One-Off Events
 
             if page === 'leaderboards'
               li(class='nav-item active')
