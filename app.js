@@ -20,6 +20,89 @@ const transport = nodemailer.createTransport(
         apiKey: process.env.SENDGRID_API_KEY
     })
 );
+var mongoose = require('mongoose');
+const run = async () => {
+    const mongooseDb = await mongoose.connect('mongodb+srv://stripcheese:Painkiller69%21@sse-db-d7ark.mongodb.net/test', { useNewUrlParser: true })
+};
+const mongooseDb = mongoose.connect('mongodb+srv://stripcheese:Painkiller69%21@sse-db-d7ark.mongodb.net/test', { useNewUrlParser: true })
+
+//-----Session-----
+var session = require('express-session')
+const MongoStore = require('connect-mongo')(session);
+
+
+app.use(session({
+    store: new MongoStore({
+        url: 'mongodb+srv://stripcheese:Painkiller69%21@sse-db-d7ark.mongodb.net/test',
+        secret: 'SUPERFUCKINGSECRET',
+        saveUninitialized: false, // don't create session until something stored
+        resave: false, //don't save session if unmodified
+        ttl: 14 * 24 * 60 * 60, // = 14 days. Default
+        autoRemove: 'native', // Default
+        key_size: '64',//default is 32, and encription is AES-256-gcm adn a hashing if sha512
+        touchAfter: 24 * 3600 // time period in seconds
+        //by doing this, setting touchAfter: 24 * 3600 
+        //you are saying to the session be updated only 
+        //one time in a period of 24 hours, does not matter 
+        //how many request's are made (with the exception of 
+        //those that change something on the session data)
+    })
+}));
+//-------------------------------------------------------
+//-----Admin Panel------
+const AdminBroExpress = require('admin-bro-expressjs')
+const AdminBro = require('admin-bro')
+const AdminBroMongoose = require('admin-bro-mongoose')
+AdminBro.registerAdapter(AdminBroMongoose)
+//----------------------
+//const Article = require('./models/article')
+//--Resource Catagories
+const contentParent = {
+    name: 'Content',
+    icon: 'fa fa-file-text',
+}
+//Catagorie sub-"group thingies"
+//const adminBro = {
+//    resources: [
+//        { resource: Article, options: { parent: contentParent } },
+//        { resource: BlogPost, options: { parent: contentParent } },
+//        { resource: Comment, options: { parent: contentParent } },
+//    ],
+//    dashboard: {
+//        component: AdminBro.bundle('./Dashboard/my-dashboard-component')
+//    },
+//}
+
+//----------------------
+//--User Types--
+const User = mongoose.model('User', { name: String, email: String, surname: String })
+const Admin = mongoose.model('Admin', { name: String, email: String })
+//----------------------
+const adminBro = new AdminBro({
+    rootPath: '/admin',
+    logoutPath: '/',
+    loginPath: '/admin/sign-in',
+    databases: [mongooseDb],
+    resources: [User, Admin],
+    branding: {
+        companyName: 'Silver State Esports',
+        softwareBrothers: 'False',
+        logo: '/public/images/HSESPORTSLOGO_1.png',
+        favicon: '/public/images/favicon.new.ico'
+    },
+    version: {
+        admin: 'false',
+        app: '1.0'
+    }
+})
+
+const router = AdminBroExpress.buildRouter(adminBro)
+AdminBro.registerAdapter(AdminBroMongoose)
+    app.use(adminBro.options.rootPath, router)
+    app.use(adminBro, router)
+console.log('AdminBro is localhost/admin')
+
+//-------------------------------------------------------
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -41,15 +124,16 @@ var team = require('./routes/team');
 var oneoff = require('./routes/oneoff');
 
 var app = express();
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/fullchain.pem', 'utf8');
+//--------Production SSL Files--------
+//const privateKey = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/privkey.pem', 'utf8');
+//const certificate = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/cert.pem', 'utf8');
+//const ca = fs.readFileSync('/etc/letsencrypt/live/silverstateesports.org/fullchain.pem', 'utf8');
 
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca
-};
+//const credentials = {
+//	key: privateKey,
+//	cert: certificate,
+//	ca: ca
+//};
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -116,7 +200,7 @@ app.use(function (err, req, res, next) {
 
 
 var httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+//const httpsServer = https.createServer(credentials, app);
 
 //httpServer.listen(80);
 //httpsServer.listen(443);
@@ -126,6 +210,6 @@ var server = app.listen(app.get('port'), function () {
     debug('Express server listening on port ' + server.address().port);
 });
 
-httpsServer.listen(443, () => {
-	console.log('HTTPS Server running on port 443');
-});
+//httpsServer.listen(443, () => {
+//	console.log('HTTPS Server running on port 443');
+//});
