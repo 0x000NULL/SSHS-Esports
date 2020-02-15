@@ -59,7 +59,7 @@
     "serve-favicon": "^2.5.0",
     "styled-components": "^4.4.1",
     "webpack": "^4.38.0",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.0"
   },
   "main": "app.js",
   "repository": "https://github.com/ethanaldrich9986/SSHS-Esports.git",
